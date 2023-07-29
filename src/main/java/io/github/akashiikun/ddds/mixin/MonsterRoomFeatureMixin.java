@@ -20,7 +20,6 @@ public abstract class MonsterRoomFeatureMixin {
     @Inject(method = "randomEntityId", at = @At("RETURN"), cancellable = true)
     private void newRandomEntityId(RandomSource randomSource, CallbackInfoReturnable<EntityType<?>> cir) {
         Object[] CUSTOM_TAG = BuiltInRegistries.ENTITY_TYPE.getTag(MONSTER_ROOM_MOBS).get().stream().map(Holder::value).toArray();
-
         if(CUSTOM_TAG.length != 0) {
             cir.setReturnValue((EntityType<?>) Util.getRandom(CUSTOM_TAG, randomSource));
         } else {
