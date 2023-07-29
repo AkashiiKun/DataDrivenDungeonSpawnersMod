@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "ddds",
+	"version": "${version}",
+	"name": "Data Driven Dungeon Spawners",
+	"description": "Custom Dungeon Spawners made easily!",
+	"authors": [
+		"AkashiiKun"
+	],
+	"license": "MIT",
+	"icon": "assets/ddds/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+			"io.github.akashiikun.ddds.DataGeneration"
+		],
+		"main": [
+          "io.github.akashiikun.ddds.DataDrivenDungeonSpawnersMod"
+		]
+	},
+	"mixins": [
+		"ddds.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
